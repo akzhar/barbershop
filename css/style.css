@@ -1,0 +1,293 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+img {
+  max-width: 100%;
+}
+
+h2,
+h3 {
+  font-size:30px;
+  line-height: 42px;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main-header {
+  background-color: #000000;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.main-navigation-list {
+  list-style: none;
+}
+
+.current-page-nav {
+  color: #ffffff
+}
+
+.main-navigation-item a {
+  color: #ffffff
+}
+
+.main-navigation-item:hover a,
+.main-navigation-item:active a {
+  background-color: #242424;
+}
+
+.user-navigation-list {
+  list-style: none;
+}
+
+.user-navigation-item a {
+  color: #ffffff;
+}
+
+.main-index {
+  background-image: url(../img/background-index.jpg);
+  background-repeat: no-repeat;
+  background-color: #000000;
+}
+
+.advantages {
+  color: #ffffff;
+}
+
+.advantages-list {
+  list-style: none;
+}
+
+.content {
+  background-image: url(../img/background.jpg);
+  background-repeat: repeat;
+  background-color: #f8f5f2;
+}
+
+.news-list {
+  list-style: none;
+}
+
+.gallery-list {
+  list-style: none;
+}
+
+.news time {
+  text-transform: none;
+}
+
+.button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: #000000;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.button a {
+  color: #ffffff;
+}
+
+.button:hover,
+.button:active {
+  background-color: #663d15;
+}
+
+.appointment input,
+.enter-popup input {
+  border: 2px solid #000101;
+}
+
+.appointment input:focus,
+.enter-popup input:focus {
+  border-color:#663d15;
+}
+
+.main-footer {
+  color: #ffffff;
+  background-color: #232323;
+}
+
+.main-footer a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.social-buttons-list {
+  list-style: none;
+}
+
+.social-buttons:hover,
+.social-buttons:active {
+  background-color: #ffffff;
+}
+
+.social-buttons a {
+  font-size: 0;
+}
+
+.social-buttons:hover path,
+.social-buttons:active path {
+  fill: #000000;
+}
+
+.button-academy:hover,
+.button-academy:active {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.enter-popup a {
+  text-decoration: underline;
+  color: #000000;
+}
+
+.map {
+  background-color: #aba9a7;
+}
+
+.enter-popup::after,
+.map::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 21px;
+  height: 21px;
+  background-repeat: no-repeat;
+  background-image: url("../img/cross.svg");
+}
+
+
+
+/*Стили для catalog.html*/
+
+
+
+.breadscrumbs-item a {
+  color: #000000;
+}
+
+.current-page-bread {
+  color: #aba9a7;
+}
+
+.goods-item-name {
+  color: #000000;
+}
+
+.goods-article {
+  color: #aeaeae
+}
+
+.goods-price {
+  background-color: #e5e5e5;
+}
+
+.fiters-checkbox,
+.fiters-radio,
+.button-close {
+  display: none;
+}
+
+.fiters-checkbox + label::before,
+.fiters-radio + label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+}
+
+.fiters-checkbox + label::before {
+  background-image: url("../img/checkbox-not-checked.png");
+}
+
+.fiters-radio + label::before {
+  background-image: url("../img/radio-not-checked.png");
+}
+
+.fiters-checkbox:checked + label::before {
+  background-image: url("../img/checkbox-checked.png");
+}
+
+.fiters-radio:checked + label::before {
+  background-image: url("../img/radio-checked.png");
+}
+
+.filters-form + label:hover,
+.filters-form + label:active {
+  color: #663d15;
+}
+
+.current-slider-button {
+  background-color: #ffffff;
+}
+
+.filters-form {
+  border: none;
+}
+
+.filters-form legend {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.goods-item {
+  background-color: #ffffff;
+}
+
+
+
+
+/*Стили для price.html*/
+
+
+
+
+.promo-phrase {
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.price-list-table,
+.price-list-table tr,
+.price-list-table td {
+  border: 2px solid #000101;
+  border-collapse: collapse;
+}
+
+
+
+
+/*Стили для item.html*/
+
+
+
+
+.goods-photos-list {
+  list-style: none;
+}
