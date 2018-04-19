@@ -1,8 +1,4 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html {
   font-family: "PT Sans Narrow", Arial, sans-serif;
   font-weight: 700;
   font-size: 14px;
@@ -12,17 +8,6 @@ body {
 
 img {
   max-width: 100%;
-}
-
-h2,
-h3 {
-  font-size:30px;
-  line-height: 42px;
-}
-
-a {
-  text-decoration: none;
-  list-style: none;
 }
 
 .visually-hidden {
@@ -36,41 +21,90 @@ a {
   overflow: hidden;
 }
 
-.main-header {
-  background-color: #000000;
-  font-size: 16px;
-  line-height: 20px;
-}
-
-.main-navigation-list {
-  list-style: none;
-}
-
-.current-page-nav {
-  color: #ffffff
-}
-
-.main-navigation-item a {
-  color: #ffffff
-}
-
-.main-navigation-item:hover a,
-.main-navigation-item:active a {
-  background-color: #242424;
-}
-
-.user-navigation-list {
-  list-style: none;
-}
-
-.user-navigation-item a {
-  color: #ffffff;
-}
-
-.main-index {
+.body-index {
   background-image: url(../img/background-index.jpg);
   background-repeat: no-repeat;
   background-color: #000000;
+}
+
+.main-header {
+  width: 100%;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #000000;
+}
+
+.logo-index {
+  position: absolute;
+  left: 50%;
+  margin-top: 130px;
+  transform: translateX(-50%);
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-navigation-list,
+.user-navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.user-navigation-list {
+  margin-right: 20px;
+}
+
+.main-navigation-item a,
+.user-navigation-item a,
+.current-page-nav {
+  display: block;
+  padding: 25px 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.current-page-nav {
+  box-sizing: border-box;
+  border-bottom: 5px solid #ffffff;
+}
+
+.main-navigation-item:hover a,
+.main-navigation-item:active a,
+.user-navigation-item:hover a,
+.user-navigation-item:active a {
+  background-color: #242424;
+}
+
+.user-navigation-item:first-child a {
+  position: relative;
+  padding-left: 50px;
+}
+
+.user-navigation-item:first-child a::before {
+  display: block;
+  position: absolute;
+  top: 28px;
+  left: 20px;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/login.svg");
+  opacity: 0.3;
+}
+
+.user-navigation-item:hover a::before,
+.user-navigation-item:active a::before {
+  opacity: 1;
 }
 
 .advantages {
@@ -78,37 +112,135 @@ a {
 }
 
 .advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-top: 290px;
   list-style: none;
+}
+
+.advantages-item {
+  width: 33.3%;
+  text-align: center;
+}
+
+.advantages-item h3 {
+  position: relative;
+  margin: 0;
+  margin-bottom: 60px;
+  font-size:30px;
+  line-height: 42px;
+}
+
+.advantages-item h3::before {
+  position: absolute;
+  display: block;
+  content: "";
+  left: 50%;
+  top:55px;
+  transform: translateX(-50%) rotate(45deg);
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+}
+
+.advantages-item p {
+  width: 260px;
+  margin: 0 auto;
+  padding-bottom: 80px;
 }
 
 .content {
+  display: flex;
+  position: relative;
+  width: 940px;
   background-image: url(../img/background.jpg);
   background-repeat: repeat;
   background-color: #f8f5f2;
+  margin-bottom: 35px;
+}
+
+.news,
+.gallery,
+.contacts,
+.appointment {
+  width: 50%;
+}
+
+.news::after,
+.contacts::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 278px;
+  content: "";
+  background-image: url("../img/shadow.png");
+}
+
+.news-list,
+.gallery-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .news-list {
-  list-style: none;
+  margin-left: 80px;
 }
 
-.gallery-list {
-  list-style: none;
+.news h2,
+.gallery h2,
+.contacts h2,
+.appointment h2,
+.enter-popup h2,
+.map h2 {
+  margin: 0;
+  font-size:30px;
+  line-height: 42px;
+}
+
+.news h2 {
+  margin-top: 50px;
+  margin-left: 80px;
+  margin-bottom: 20px;
+}
+
+.news-item p {
+  width: 350px;
+  margin: 0;
 }
 
 .news time {
+  display: block;
   text-transform: none;
+  margin-bottom: 30px;
 }
 
 .button {
+  display: inline-block;
+  vertical-align: top;
   margin: 0;
-  padding: 0;
+  padding: 10px 0;
+  width: 140px;
   border: none;
   background-color: #000000;
   color: #ffffff;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
   text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
 }
-.button a {
-  color: #ffffff;
+
+.news .button {
+  margin-bottom: 50px;
+  margin-left: 80px;
 }
 
 .button:hover,
@@ -116,9 +248,143 @@ a {
   background-color: #663d15;
 }
 
+.gallery-list {
+  position: relative;
+}
+
+.gallery-item {
+  border: 7px solid #ffffff;
+  width: 286px;
+  height: 164px;
+}
+
+.gallery-item-hidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.gallery h2 {
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-bottom: 20px;
+}
+
+.gallery-list {
+  margin-left: 100px;
+}
+
+.gallery div {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+.gallery .button {
+  margin-right: 20px;
+}
+
+.contacts h2 {
+  margin-top: 50px;
+  margin-left: 80px;
+  margin-bottom: 20px;
+}
+
+.contacts p {
+  margin: 0;
+  margin-left: 80px;
+  margin-bottom: 30px;
+}
+
+.contacts div {
+  display: flex;
+  margin-left: 80px;
+  margin-bottom: 50px;
+}
+
+.contacts .button {
+  margin-right: 20px;
+}
+
+.appointment h2 {
+  margin-top: 50px;
+  margin-left: 80px;
+  margin-bottom: 20px;
+}
+
+.appointment p {
+  width: 300px;
+  margin: 0;
+  margin-left: 80px;
+}
+
+.appointment-form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.appointment-form p {
+  width: 140px;
+  margin: 0;
+}
+
+.appointment-form p:first-child,
+.appointment-form p:nth-child(odd) {
+  margin-right: 20px;
+}
+
+.appointment-form label {
+  display: block;
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.appointment-form .button {
+  width: 300px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
 .appointment input,
 .enter-popup input {
+  box-sizing: border-box;
+  width: 140px;
   border: 2px solid #000101;
+  padding: 10px;
+}
+
+::-webkit-input-placeholder {
+  font-weight: 700;
+}
+
+::-moz-placeholder {
+  font-weight: 700;
+}
+
+:-moz-placeholder {
+  font-weight: 700;
+}
+
+:-ms-input-placeholder {
+  font-weight: 700;
+}
+
+:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+:focus::-moz-placeholder {
+  color: transparent;
+}
+
+:focus:-moz-placeholder {
+  color: transparent;
+}
+
+:focus:-ms-input-placeholder {
+  color: transparent;
 }
 
 .appointment input:focus,
@@ -127,17 +393,57 @@ a {
 }
 
 .main-footer {
+  position: relative;
+  width: 100%;
   color: #ffffff;
   background-color: #232323;
 }
 
-.main-footer a {
+.main-footer .wrapper {
+  display: flex;
+}
+
+.main-footer-contact a {
   color: #ffffff;
   text-decoration: underline;
 }
 
+.main-footer-contact {
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+.main-footer-social {
+  margin-top: 60px;
+  margin-left: 90px;
+}
+
+.main-footer-social b {
+  display: block;
+  width: 140px;
+  text-align: center;
+}
+
 .social-buttons-list {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 140px;
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 50px;
+  padding: 0;
+}
+
+.social-buttons {
+  width: 44px;
+  height: 44px;
+  margin-right: 4px;
+  padding: 0;
+}
+
+.social-buttons:nth-child(3n) {
+  margin-right: 0;
 }
 
 .social-buttons:hover,
@@ -147,6 +453,11 @@ a {
 
 .social-buttons a {
   font-size: 0;
+}
+
+.social-buttons svg {
+  margin: 0 auto;
+  transform: translateY(50%);
 }
 
 .social-buttons:hover path,
@@ -160,20 +471,36 @@ a {
   color: #000000;
 }
 
+.copyright {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.copyright b {
+  display: block;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 15px;
+}
+
+.enter-popup {
+  display: none;
+}
+
 .enter-popup a {
   text-decoration: underline;
   color: #000000;
 }
 
 .map {
+  display: none;
   background-color: #aba9a7;
 }
 
 .enter-popup::after,
 .map::after {
   content: "";
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
   width: 21px;
   height: 21px;
   background-repeat: no-repeat;
