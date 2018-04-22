@@ -6,6 +6,12 @@ html {
   text-transform: uppercase;
 }
 
+body {
+  background-image: url(../img/background.jpg);
+  background-repeat: repeat;
+  background-color: #f8f3f0;
+}
+
 img {
   max-width: 100%;
 }
@@ -34,11 +40,21 @@ img {
   background-color: #000000;
 }
 
+.main-header .wrapper {
+  position: relative;
+}
+
 .logo-index {
   position: absolute;
   left: 50%;
   margin-top: 130px;
   transform: translateX(-50%);
+}
+
+.logo {
+  align-self: center;
+  margin-left: 30px;
+  margin-right: 40px;
 }
 
 .wrapper {
@@ -48,7 +64,6 @@ img {
 
 .main-navigation {
   display: flex;
-  justify-content: space-between;
 }
 
 .main-navigation-list,
@@ -60,22 +75,29 @@ img {
   list-style: none;
 }
 
+.main-navigation-list {
+ margin-right: auto;
+}
+
 .user-navigation-list {
   margin-right: 20px;
 }
 
 .main-navigation-item a,
-.user-navigation-item a,
-.current-page-nav {
+.user-navigation-item a {
   display: block;
   padding: 25px 20px;
   color: #ffffff;
   text-decoration: none;
 }
 
-.current-page-nav {
-  box-sizing: border-box;
+.current-page-nav span {
+  display: block;
   border-bottom: 5px solid #ffffff;
+  padding: 0 20px;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  color: #ffffff;
 }
 
 .main-navigation-item:hover a,
@@ -236,6 +258,11 @@ img {
   text-decoration: none;
   text-align: center;
   cursor: pointer;
+}
+
+.button a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .news .button {
@@ -508,29 +535,76 @@ img {
 }
 
 
-
 /*Стили для catalog.html*/
 
 
+.breadscrumbs-head {
+  margin: 0;
+  margin-top: 60px;
+  margin-left: 10px;
+  margin-bottom: 25px;
+}
+
+.breadscrumbs-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.breadscrumbs-item {
+  position: relative;
+  list-style: none;
+  padding-right: 40px;
+}
+
+.breadscrumbs-item:hover {
+  text-decoration: underline;
+}
+
+.breadscrumbs-item::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #000000;
+  transform: translateY(-50%) rotate(45deg);
+}
 
 .breadscrumbs-item a {
   color: #000000;
+  text-decoration: none;
 }
 
-.current-page-bread {
+.breadscrumbs-item-current {
   color: #aba9a7;
+  list-style: none;
 }
 
-.goods-item-name {
-  color: #000000;
+.catalog-wrapper {
+  display: flex;
+  margin-left: 10px;
 }
 
-.goods-article {
-  color: #aeaeae
+.filters {
+  width: 25%;
 }
 
-.goods-price {
-  background-color: #e5e5e5;
+.filters-form {
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.filters-form legend {
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 30px;
 }
 
 .fiters-checkbox,
@@ -539,11 +613,22 @@ img {
   display: none;
 }
 
+.fiters-checkbox + label,
+.fiters-radio + label {
+  position: relative;
+  display: block;
+  padding-left: 40px;
+  width: 150px;
+  margin-bottom: 10px;
+}
+
 .fiters-checkbox + label::before,
 .fiters-radio + label::before {
   content: "";
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 0;
   width: 24px;
   height: 24px;
   background-repeat: no-repeat;
@@ -570,51 +655,322 @@ img {
   color: #663d15;
 }
 
-.current-slider-button {
-  background-color: #ffffff;
+.filters .button {
+  margin-top: 40px;
 }
 
-.filters-form {
-  border: none;
+.goods {
+  width: 75%;
+  margin-top: 40px;
 }
 
-.filters-form legend {
-  font-size: 24px;
-  line-height: 30px;
+.goods-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .goods-item {
   background-color: #ffffff;
+  width: 220px;
+  min-height: 285px;
+  font-size: 0;
+  box-shadow: 0px 0px 10px 0px rgba(85,85,85,1);
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
-
-
-
-/*Стили для price.html*/
-
-
-
-
-.promo-phrase {
-  font-size: 48px;
-  line-height: 48px;
+.goods-item:nth-child(3n) {
+  margin-right: 0;
 }
 
-.price-list-table,
-.price-list-table tr,
-.price-list-table td {
-  border: 2px solid #000101;
-  border-collapse: collapse;
+.goods-item-name {
+  color: #000000;
+  font-size: 14px;
+  text-decoration: none;
 }
 
+.goods-item-name p {
+  margin: 0;
+  margin-left: 16.5px;
+  line-height: 18px;
+}
 
+.goods-article {
+  color: #aeaeae
+}
+
+.goods-price {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 18px;
+  width: 110px;
+  text-align: center;
+  padding: 13px 0;
+  background-color: #e5e5e5;
+}
+
+.goods-item .goods-price {
+  margin: 15px 0;
+  margin-left: 16.5px;
+}
+
+.goods-item .button {
+  width: 78px;
+  margin: 15px 0;
+}
+
+.slider-controls {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-top: 45px;
+  margin-bottom: 50px;
+  margin-left: 250px;
+}
+
+.slider-controls .button {
+  width: 44px;
+  height: 24px;
+  margin-right: 7px;
+}
+
+.current-slider-button {
+  background-color: #ffffff;
+  color: #000000;
+  list-style: none;
+  padding: 10px;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  margin-right: 7px;
+}
 
 
 /*Стили для item.html*/
 
 
+.item-wrapper {
+  display: flex;
+}
 
+.goods-photos {
+  margin-right: 80px;
+}
+
+.goods-photos img {
+  box-shadow: 0px 0px 10px 0px rgba(85,85,85,1);
+}
+
+.goods-photos > img {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
 
 .goods-photos-list {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.goods-photos-item {
+  margin-right: 20px;
+  margin-bottom: 50px;
+}
+
+.goods-photos-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.goods-info {
+  width: 410px;
+  font-size: 0;
+}
+
+.goods-keys {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 65px;
+  margin-right: 20px;
+  margin-bottom: 40px;
+}
+
+.goods-info p {
+  font-size: 14px;
+}
+
+.goods-info h3 {
+  font-size: 24px;
+  margin: 0;
+  margin-top: 65px;
+  margin-bottom: 35px;
+}
+
+.goods-available {
+  margin: 0;
+}
+
+.goods-article {
+  margin: 0;
+}
+
+.goods-description {
+  font-size: 14px;
+  width: 390px;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.goods-set-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.goods-set-item {
+  position: relative;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.goods-set-item::before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #000000;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+
+/*Стили для price.html*/
+
+
+.promo-phrase-wrapper {
+  position: relative;
+  text-align: center;
+  margin: 0 10px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.promo-phrase {
+  position: relative;
+  font-size: 48px;
+  line-height: 48px;
+  padding: 0 25px;
+  background-color: #f8f3f0;
+  background-image: url("../img/background.jpg");
+  z-index: 2;
+}
+
+.promo-phrase-wrapper::before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  content: "";
+  background-color: #000000;
+  width: 100%;
+  height: 2px;
+  z-index: 1;
+}
+
+.price-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.supplier {
+  margin-left: 10px;
+  margin-right: 240px;
+}
+
+.price-wrapper h2 {
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 240px;
+}
+
+.price-wrapper ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.price-wrapper li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 14px;
+  padding-bottom: 15px;
+}
+
+.price-wrapper li::before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #000000;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.price-list h2 {
+  width: 180px;
+}
+
+.price-wrapper table,
+.price-wrapper tr,
+.price-wrapper td {
+  border: 2px solid #000101;
+  border-collapse: collapse;
+}
+
+.price-wrapper table {
+  margin-bottom: 30px;
+}
+
+.price-wrapper td {
+  width: 208px;
+  padding: 8px 0;
+  padding-left: 20px;
+}
+
+.price-wrapper td:not(:first-child) {
+  text-align: center;
+}
+
+.about-us {
+  margin-left: 10px;
+  margin-bottom: 50px;
+}
+
+.about-us h2 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.price-wrapper p {
+  width: 390px;
+  margin: 0;
+  margin-right: 90px;
+  margin-bottom: 30px;
+}
+
+.price-wrapper p:nth-child(even) {
+  width: 380px;
+  margin-right: 0;
 }

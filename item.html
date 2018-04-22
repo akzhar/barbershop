@@ -7,89 +7,94 @@
   <meta charset="utf-8">
   <title>Barbershop "Borodinski"</title>
 </head>
-<body  class="body-pages">
+<body>
 
   <header class="main-header">
-    <a href="index.html" class="logo"><img src="img/logo.svg" width="111" height="24" alt="Логотип"></a>
-    <nav class="main-navigation">
-      <ul class="main-navigation-list">
-        <li class="main-navigation-item">
-          <a href="#">Информация</a>
-        </li>
-        <li class="main-navigation-item">
-          <a href="#">Новости</a>
-        </li>
-        <li class="main-navigation-item">
-          <a href="price.html">Прайс лист</a>
-        </li>
-        <li class="main-navigation-item">
-          <span class="current-page-nav">Магазин</span>
-        </li>
-        <li class="main-navigation-item">
-          <a href="#">Контакты</a>
-        </li>
-      </ul>
-      <ul class="user-navigation-list">
-        <li class="user-navigation-item">
-          <a href="#">Вход</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="wrapper">
+      <nav class="main-navigation">
+        <a href="index.html" class="logo"><img src="img/logo.svg" width="111" height="24" alt="Логотип"></a>
+        <ul class="main-navigation-list">
+          <li class="main-navigation-item">
+            <a href="#">Информация</a>
+          </li>
+          <li class="main-navigation-item">
+            <a href="#">Новости</a>
+          </li>
+          <li class="main-navigation-item">
+            <a href="price.html">Прайс лист</a>
+          </li>
+          <li class="main-navigation-item current-page-nav">
+            <span>Магазин</span>
+          </li>
+          <li class="main-navigation-item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+        <ul class="user-navigation-list">
+          <li class="user-navigation-item">
+            <a href="#">Вход</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main class="main-content">
+  <main class="wrapper">
 
-    <h1>Набор для путешествий "Baxter of California"</h1>
+    <h1 class="breadscrumbs-head">Набор для путешествий "Baxter of California"</h1>
     <ul class="breadscrumbs-list">
       <li class="breadscrumbs-item">
         <a href="index.html">Главная</a>
       </li>
       <li class="breadscrumbs-item">
-        <a href="#">Магазин</a>
+        <a href="catalog.html">Магазин</a>
       </li>
       <li class="breadscrumbs-item">
         <a href="#">Средства для ухода</a>
       </li>
-      <li>
-        <span class="current-page-bread">Набор для путешествий "Baxter of California"</span>
+      <li class="breadscrumbs-item-current">
+        <span>Набор для путешествий "Baxter of California"</span>
       </li>
     </ul>
 
-    <section class="goods-photos">
-      <h2 class="visually-hidden">Фото продукции</h2>
-      <img src="img/product-big.jpg" width="460" height="498" alt="Большое фото товара-набор">
-      <ul class="goods-photos-list">
-        <li>
-          <a href="#"><img src="img/product-small-1.jpg" width="140" height="149" alt="Маленькое фото товара-набор"></a>
-        </li>
-        <li>
-          <a href="#"><img src="img/product-small-2.jpg" width="140" height="149" alt="Маленькое фото товара-сумка"></a>
-        </li>
-        <li>
-          <a href="#"><img src="img/product-small-3.jpg" width="140" height="149" alt="Маленькое фото товара-набор"></a>
-        </li>
-      </ul>
-    </section>
+    <div class="item-wrapper">
+      <section class="goods-photos">
+        <h2 class="visually-hidden">Фото продукции</h2>
+        <img src="img/product-big.jpg" width="460" height="498" alt="Большое фото товара-набор">
+        <ul class="goods-photos-list">
+          <li class="goods-photos-item">
+            <a href="#"><img src="img/product-small-1.jpg" width="140" height="149" alt="Маленькое фото товара-набор"></a>
+          </li>
+          <li class="goods-photos-item">
+            <a href="#"><img src="img/product-small-2.jpg" width="140" height="149" alt="Маленькое фото товара-сумка"></a>
+          </li>
+          <li class="goods-photos-item">
+            <a href="#"><img src="img/product-small-3.jpg" width="140" height="149" alt="Маленькое фото товара-набор"></a>
+          </li>
+        </ul>
+      </section>
 
-    <section class="goods-info">
-      <h2 class="visually-hidden">Описание продукции</h2>
-      <p class="goods-available">Есть в наличии</p>
-      <p class="goods-article">Артикул: dexter-ae</p>
-      <p class="goods-description">
-        Travel Kit – необходимый аксессуар во время любого путешествия. В аккуратной кожаной сумке находится все, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем для бритья, крем после бритья, шампунь. Набор также может стать отличным подарком.
-      </p>
-      <span class="goods-price">2 900 ₽</span>
-      <a href="#" class="button">Купить</a>
-      <h3>В набор входят:</h3>
-      <ul class="goods-set">
-        <li class="goods-set-item">Средство для умывания (50 мл)</li>
-        <li class="goods-set-item">Увлажняющий крем (50 мл)</li>
-        <li class="goods-set-item">Крем для бритья (50 мл)</li>
-        <li class="goods-set-item">Крем после бритья, шампунь (50 мл)</li>
-        <li class="goods-set-item">Удобная кожаная косметичка</li>
-      </ul>
-    </section>
-
+      <section class="goods-info">
+        <h2 class="visually-hidden">Описание продукции</h2>
+        <div class="goods-keys">
+          <p class="goods-available">Есть в наличии</p>
+          <p class="goods-article">Артикул: dexter-ae</p>
+        </div>
+        <p class="goods-description">
+          Travel Kit – необходимый аксессуар во время любого путешествия. В аккуратной кожаной сумке находится все, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем для бритья, крем после бритья, шампунь. Набор также может стать отличным подарком.
+        </p>
+        <span class="goods-price">2 900 ₽</span>
+        <a href="#" class="button">Купить</a>
+        <h3>В набор входят:</h3>
+        <ul class="goods-set-list">
+          <li class="goods-set-item">Средство для умывания (50 мл)</li>
+          <li class="goods-set-item">Увлажняющий крем (50 мл)</li>
+          <li class="goods-set-item">Крем для бритья (50 мл)</li>
+          <li class="goods-set-item">Крем после бритья, шампунь (50 мл)</li>
+          <li class="goods-set-item">Удобная кожаная косметичка</li>
+        </ul>
+      </section>
+    </div>
   </main>
 
   <footer class="main-footer">
