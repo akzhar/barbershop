@@ -111,7 +111,7 @@
           Пн—Пт: с 10:00 До 22:00<br>
         Сб—Вс: с 10:00 до 19:00</p>
         <div>
-          <a class="button" href="#">Как проехать</a>
+          <a class="button map-open" href="#">Как проехать</a>
           <a class="button" href="#">Обратная связь</a>
         </div>
       </section>
@@ -182,25 +182,26 @@
     <h2>Личный кабинет</h2>
     <p>Ведите пожалуйста свой логин и пароль</p>
     <form class="enter-popup-form" action="https://echo.htmlacademy.ru" method="post">
-      <label class="vissually-hidden" for="enter-popup-login">Логин</label>
-      <input type="text" name="login" placeholder="Логин" value="" id="enter-popup-login">
-      <label class="vissually-hidden" for="enter-popup-password">Пароль</label>
-      <input type="password" name="password" placeholder="Пароль" value="" id="enter-popup-password">
-      <input type="checkbox" name="remember" id="enter-popup-remember" checked>
-      <span class="checkbox-indicator">
-        <!-- ДЛЯ НЕ СИСТЕМНОГО ЧЕКБОКСА -->
-      </span>
-      <label for="enter-popup-remember">Запомните меня</label>
-      <a href="#">Я забыл пароль!</a>
+      <label class="visually-hidden" for="enter-popup-login">Логин</label>
+      <input type="text" name="login" placeholder="ЛОГИН" value="" id="enter-popup-login">
+      <label class="visually-hidden" for="enter-popup-password">Пароль</label>
+      <input type="password" name="password" placeholder="ПАРОЛЬ" value="" id="enter-popup-password">
+      <p class="enter-popup-remember">
+        <input class="remember visually-hidden" type="checkbox" name="remember" id="enter-popup-remember" checked>
+        <label for="enter-popup-remember">Запомните меня</label>
+        <a href="#">Я забыл пароль!</a>
+      </p>
       <button class="button" type="submit">Войти</button>
     </form>
+    <button class="close close1"><span class="visually-hidden">Закрыть форму</span></button>
   </section>
 
   <section class="map">
     <h2 class="visually-hidden">Карта</h2>
     <span class="visually-hidden">Наш адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8</span>
-    <iframe src="https://yandex.ru/map-widget/v1/-/CBqNvPGw0B" width="766" height="560" frameborder="0"></iframe>
+    <iframe src="https://yandex.ru/map-widget/v1/-/CBqNzEU5DB" width="760" height="554" frameborder="0"></iframe>
+    <button class="close close2"><span class="visually-hidden">Закрыть форму</span></button>
   </section>
-
+  <script src="js/popup.js"></script>
 </body>
 </html>

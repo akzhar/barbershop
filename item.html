@@ -133,22 +133,21 @@
   </footer>
 
   <section class="enter-popup">
-    <button class="button-close" type="button">Закрыть форму ЛК</button>
     <h2>Личный кабинет</h2>
     <p>Ведите пожалуйста свой логин и пароль</p>
     <form class="enter-popup-form" action="https://echo.htmlacademy.ru" method="post">
-      <label class="vissually-hidden" for="enter-popup-login">Логин</label>
-      <input type="text" name="login" placeholder="Логин" value="" id="enter-popup-login">
-      <label class="vissually-hidden" for="enter-popup-password">Пароль</label>
-      <input type="password" name="password" placeholder="Пароль" value="" id="enter-popup-password">
-      <input class="vissually-hidden" type="checkbox" name="remember" id="enter-popup-remember" checked>
-      <span class="checkbox-indicator">
-        <!-- ДЛЯ НЕ СИСТЕМНОГО ЧЕКБОКСА -->
-      </span>
-      <label for="enter-popup-remember">Запомните меня</label>
-      <a href="#">Я забыл пароль!</a>
+      <label class="visually-hidden" for="enter-popup-login">Логин</label>
+      <input type="text" name="login" placeholder="ЛОГИН" value="" id="enter-popup-login">
+      <label class="visually-hidden" for="enter-popup-password">Пароль</label>
+      <input type="password" name="password" placeholder="ПАРОЛЬ" value="" id="enter-popup-password">
+      <p class="enter-popup-remember">
+        <input class="remember visually-hidden" type="checkbox" name="remember" id="enter-popup-remember" checked>
+        <label for="enter-popup-remember">Запомните меня</label>
+        <a href="#">Я забыл пароль!</a>
+      </p>
       <button class="button" type="submit">Войти</button>
     </form>
+    <button class="close close1"><span class="visually-hidden">Закрыть форму</span></button>
   </section>
 
 </body>
