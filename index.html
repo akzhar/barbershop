@@ -80,17 +80,17 @@
         <ul class="gallery-list">
           <li class="gallery-item">
             <a href="#">
-              <img src="img/studio.jpg" width="286px" height="164px" alt="Интерьер салона">
+              <img src="img/studio.jpg" width="286" height="164" alt="Интерьер салона">
             </a>
           </li>
           <li class="gallery-item-hidden">
             <a href="#">
-              <img src="" alt="">
+              <img src="#" alt="Интерьер салона">
             </a>
           </li>
           <li class="gallery-item-hidden">
             <a href="#">
-              <img src="" alt="">
+              <img src="#" alt="Интерьер салона">
             </a>
           </li>
         </ul>
@@ -122,19 +122,19 @@
         <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
           <p>
             <label for="appointment-date">Дата</label>
-            <input type="text" name="date" placeholder="08.10.2017" value="" id="appointment-date">
+            <input type="text" name="date" placeholder="08.10.2017" value="" id="appointment-date" required>
           </p>
           <p>
             <label for="appointment-time">Время</label>
-            <input type="text" name="time" placeholder="10:00" value="" id="appointment-time">
+            <input type="text" name="time" placeholder="10:00" value="" id="appointment-time" required>
           </p>
           <p>
             <label for="appointment-name">Ваше имя</label>
-            <input type="text" name="name" placeholder="Борода" value="" id="appointment-name">
+            <input type="text" name="name" placeholder="Борода" value="" id="appointment-name" required>
           </p>
           <p>
             <label for="appointment-tel">Телефон</label>
-            <input type="tel" name="tel" placeholder="+7 123 456-78-90" value="" id="appointment-tel">
+            <input type="tel" name="tel" placeholder="+7 123 456-78-90" value="" id="appointment-tel" required>
           </p>
           <button class="button" type="submit">Отправить</button>
         </form>
@@ -199,7 +199,7 @@
   <section class="map">
     <h2 class="visually-hidden">Карта</h2>
     <span class="visually-hidden">Наш адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8</span>
-    <iframe src="https://yandex.ru/map-widget/v1/-/CBqNzEU5DB" width="760" height="554" frameborder="0"></iframe>
+    <iframe src="https://yandex.ru/map-widget/v1/-/CBqNzEU5DB" width="760" height="554"></iframe>
     <button class="close close2"><span class="visually-hidden">Закрыть форму</span></button>
   </section>
   <script src="js/popup.js"></script>

@@ -659,11 +659,6 @@ img {
   box-shadow: 0px 0px 150px 0px rgba(0,0,0,1);
 }
 
-.modal-error {
-  animation-name: shake;
-  animation-duration: 0.6s;
-}
-
 .enter-popup h2 {
   margin-left: 80px;
   padding-top: 50px;
@@ -755,6 +750,10 @@ img {
   box-shadow: 0px 0px 150px 0px rgba(0,0,0,1);
 }
 
+.map iframe {
+  border: none;
+}
+
 .enter-popup .close,
 .map .close {
   position: absolute;
@@ -785,6 +784,10 @@ img {
   animation-duration: 0.9s;
 }
 
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
+}
 /*Стили для catalog.html*/
 
 
@@ -873,8 +876,8 @@ img {
   position: absolute;
   top: 2px;
   left: 0;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   background-repeat: no-repeat;
 }
 
