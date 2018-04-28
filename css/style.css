@@ -174,11 +174,15 @@ img {
   position: absolute;
   left: 50%;
   margin-top: 130px;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .logo {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   margin-left: 30px;
   margin-right: 40px;
 }
@@ -189,13 +193,18 @@ img {
 }
 
 .main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .main-navigation-list,
 .user-navigation-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -260,8 +269,11 @@ img {
 }
 
 .advantages-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   padding: 0;
   margin-top: 290px;
@@ -287,7 +299,9 @@ img {
   content: "";
   left: 50%;
   top:55px;
-  transform: translateX(-50%) rotate(45deg);
+  -webkit-transform: translateX(-50%) rotate(45deg);
+      -ms-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
   width: 20px;
   height: 20px;
   background-color: #ffffff;
@@ -300,6 +314,8 @@ img {
 }
 
 .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   width: 940px;
@@ -322,7 +338,9 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 8px;
   height: 278px;
   content: "";
@@ -428,6 +446,8 @@ img {
 }
 
 .gallery div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 50px;
   margin-left: 100px;
@@ -450,6 +470,8 @@ img {
 }
 
 .contacts div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-left: 80px;
   margin-bottom: 50px;
@@ -472,8 +494,11 @@ img {
 }
 
 .appointment-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 300px;
   margin: 0 auto;
 }
@@ -502,7 +527,8 @@ img {
 
 .appointment input,
 .enter-popup input {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 140px;
   border: 2px solid #000101;
   padding: 10px;
@@ -556,6 +582,8 @@ img {
 }
 
 .main-footer .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -582,8 +610,11 @@ img {
 
 .social-buttons-list {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 140px;
   margin: 0;
   margin-top: 15px;
@@ -614,7 +645,9 @@ img {
 
 .social-buttons svg {
   margin: 0 auto;
-  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
 }
 
 .social-buttons:hover path,
@@ -656,7 +689,8 @@ img {
   background-color: #f8f3f0;
   background-image: url("../img/background.jpg");
   background-repeat: repeat;
-  box-shadow: 0px 0px 150px 0px rgba(0,0,0,1);
+  -webkit-box-shadow: 0px 0px 150px 0px rgba(0,0,0,1);
+          box-shadow: 0px 0px 150px 0px rgba(0,0,0,1);
   z-index: 3;
 }
 
@@ -675,8 +709,13 @@ img {
 .enter-popup-form {
   width: 300px;
   margin-left: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .enter-popup-form input {
@@ -698,8 +737,12 @@ img {
 .enter-popup-remember {
   margin: 0;
   margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .enter-popup-remember label {
@@ -748,7 +791,8 @@ img {
   background-image: url("../img/map.png");
   background-repeat: no-repeat;
   border: 10px solid #ffffff;
-  box-shadow: 0px 0px 150px 0px rgba(0,0,0,1);
+  -webkit-box-shadow: 0px 0px 150px 0px rgba(0,0,0,1);
+          box-shadow: 0px 0px 150px 0px rgba(0,0,0,1);
 }
 
 .map iframe {
@@ -766,7 +810,9 @@ img {
   background-repeat: no-repeat;
   background-image: url("../img/cross.svg");
   cursor: pointer;
-  transform: scale(1.8,1.8);
+  -webkit-transform: scale(1.8,1.8);
+      -ms-transform: scale(1.8,1.8);
+          transform: scale(1.8,1.8);
 }
 
 .enter-popup .close {
@@ -781,13 +827,17 @@ img {
 
 .modal-show {
   display: block;
-  animation-name: bounceInDown;
-  animation-duration: 0.9s;
+  -webkit-animation-name: bounceInDown;
+          animation-name: bounceInDown;
+  -webkit-animation-duration: 0.9s;
+          animation-duration: 0.9s;
 }
 
 .modal-error {
-  animation-name: shake;
-  animation-duration: 0.6s;
+  -webkit-animation-name: shake;
+          animation-name: shake;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
 }
 /*Стили для catalog.html*/
 
@@ -800,8 +850,11 @@ img {
 }
 
 .breadscrumbs-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   padding: 0;
   margin-left: 10px;
@@ -826,7 +879,9 @@ img {
   width: 10px;
   height: 10px;
   background-color: #000000;
-  transform: translateY(-50%) rotate(45deg);
+  -webkit-transform: translateY(-50%) rotate(45deg);
+      -ms-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
 }
 
 .breadscrumbs-item a {
@@ -840,6 +895,8 @@ img {
 }
 
 .catalog-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-left: 10px;
 }
@@ -918,8 +975,11 @@ img {
 }
 
 .goods-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -930,7 +990,8 @@ img {
   width: 220px;
   min-height: 285px;
   font-size: 0;
-  box-shadow: 0px 0px 10px 0px rgba(85,85,85,1);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(85,85,85,1);
+          box-shadow: 0px 0px 10px 0px rgba(85,85,85,1);
   margin-right: 20px;
   margin-bottom: 20px;
 }
@@ -977,8 +1038,11 @@ img {
 }
 
 .slider-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   padding: 0;
   margin-top: 45px;
@@ -1008,6 +1072,8 @@ img {
 
 
 .item-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1016,7 +1082,8 @@ img {
 }
 
 .goods-photos img {
-  box-shadow: 0px 0px 10px 0px rgba(85,85,85,1);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(85,85,85,1);
+          box-shadow: 0px 0px 10px 0px rgba(85,85,85,1);
 }
 
 .goods-photos > img {
@@ -1025,8 +1092,11 @@ img {
 }
 
 .goods-photos-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1047,8 +1117,12 @@ img {
 }
 
 .goods-keys {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 65px;
   margin-right: 20px;
   margin-bottom: 40px;
@@ -1101,7 +1175,9 @@ img {
   width: 10px;
   height: 10px;
   background-color: #000000;
-  transform: translateY(-50%) rotate(45deg);
+  -webkit-transform: translateY(-50%) rotate(45deg);
+      -ms-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
 }
 
 
@@ -1138,8 +1214,11 @@ img {
 }
 
 .price-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .supplier {
@@ -1178,7 +1257,9 @@ img {
   width: 10px;
   height: 10px;
   background-color: #000000;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .price-list h2 {
