@@ -14,11 +14,6 @@ btnOpen.addEventListener("click", function(evt) {
   datefield1.focus();
 });
 
-btnMap.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  map.classList.toggle("modal-show");
-});
-
 btnSubmit.onclick = function(evt) {
   form.classList.remove("modal-error");
   form.offsetWidth = form.offsetWidth;
@@ -58,4 +53,9 @@ btnClose2.addEventListener("click", function(evt) {
   evt.preventDefault();
   map.classList.remove("modal-show");
   map.classList.remove("modal-error");
+});
+
+btnMap.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  map.classList.toggle("modal-show");
 });
